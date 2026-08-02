@@ -122,10 +122,10 @@ export default function App() {
             📈 Stock Agent
           </a>
           <div className="nav-links">
+            <a href="#markets">마켓</a>
             <a href="#about">소개</a>
             <a href="#values">핵심 가치</a>
             <a href="#roadmap">로드맵</a>
-            <a href="#markets">마켓</a>
           </div>
         </div>
       </nav>
@@ -141,9 +141,9 @@ export default function App() {
         <h1>Stock Agent</h1>
         <p>
           LLM 에이전트가 시장 데이터를 스스로 수집 · 해석하고, 사람이 이해할 수 있는
-          인사이트로 바꿔주는 도구를 만들어요. 데이터 파이프라인부터 차트 UI, 퀀트
-          백테스트, 뉴스 · 공시 요약 에이전트까지 — 개인 투자자가 쓸 수 있는 형태로
-          묶는 것이 목표예요.
+          인사이트로 바꿔주는 도구를 만들어요. <strong>Penny Stock</strong> 시장에
+          주목해서, 데이터 파이프라인부터 차트 UI, 퀀트 백테스트, 뉴스 · 공시 요약
+          에이전트까지 — 개인 투자자가 쓸 수 있는 형태로 묶는 것이 목표예요.
         </p>
         <a className="hero-cta" href="#about">
           우리가 만드는 것 구경하기 ⛅
@@ -151,6 +151,28 @@ export default function App() {
       </header>
 
       <main>
+        <section id="markets" className="alt-bg">
+          <div className="container">
+            <h2 className="section-title">오늘의 마켓 🍭</h2>
+            <p className="section-sub">NASDAQ 100 · S&amp;P 500 지수 캔들 차트</p>
+            <div className="chart-grid">
+              <div className="chart-card">
+                <h3>🌙 NASDAQ 100</h3>
+                <div className="chart-body">
+                  <TradingViewChart symbol="OANDA:NAS100USD" />
+                </div>
+              </div>
+              <div className="chart-card">
+                <h3>🌟 S&amp;P 500</h3>
+                <div className="chart-body">
+                  <TradingViewChart symbol="OANDA:SPX500USD" />
+                </div>
+              </div>
+            </div>
+            <p className="chart-note">차트는 TradingView 위젯으로 제공돼요.</p>
+          </div>
+        </section>
+
         <section id="about">
           <div className="container">
             <h2 className="section-title">무엇을 만드나요? 🎨</h2>
@@ -249,27 +271,6 @@ export default function App() {
           </div>
         </section>
 
-        <section id="markets" className="alt-bg">
-          <div className="container">
-            <h2 className="section-title">오늘의 마켓 🍭</h2>
-            <p className="section-sub">NASDAQ · S&amp;P 500 지수 캔들 차트</p>
-            <div className="chart-grid">
-              <div className="chart-card">
-                <h3>🌙 NASDAQ Composite</h3>
-                <div className="chart-body">
-                  <TradingViewChart symbol="NASDAQ:IXIC" />
-                </div>
-              </div>
-              <div className="chart-card">
-                <h3>🌟 S&amp;P 500</h3>
-                <div className="chart-body">
-                  <TradingViewChart symbol="SP:SPX" />
-                </div>
-              </div>
-            </div>
-            <p className="chart-note">차트는 TradingView 위젯으로 제공돼요.</p>
-          </div>
-        </section>
       </main>
 
       <footer>
