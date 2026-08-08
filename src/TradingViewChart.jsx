@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
  * TradingView Advanced Chart 위젯 임베드.
  * style: "1" = 캔들 차트
  */
-export default function TradingViewChart({ symbol }) {
+export default function TradingViewChart({ symbol, dark = false }) {
   const containerRef = useRef(null)
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function TradingViewChart({ symbol }) {
       symbol,
       interval: 'D',
       timezone: 'Asia/Seoul',
-      theme: 'light',
+      theme: dark ? 'dark' : 'light',
       style: '1',
       locale: 'kr',
       allow_symbol_change: false,
@@ -34,7 +34,7 @@ export default function TradingViewChart({ symbol }) {
     return () => {
       container.innerHTML = ''
     }
-  }, [symbol])
+  }, [symbol, dark])
 
   return (
     <div
