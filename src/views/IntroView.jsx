@@ -133,7 +133,7 @@ export default function IntroView({ dark, onNavigate }) {
           width="360"
           height="360"
         />
-        <div className="hero-badge">💛 오픈 조직 · Stock-Agent-DONGSIGI</div>
+        <div className="hero-badge">💛 조직 · Stock-Agent-DONGSIGI</div>
         <h1>Stock Agent</h1>
         <p>
           LLM 에이전트가 시장 데이터를 스스로 수집 · 해석하고, 사람이 이해할 수 있는
