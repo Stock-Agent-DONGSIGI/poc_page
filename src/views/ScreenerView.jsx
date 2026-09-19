@@ -100,7 +100,7 @@ export default function ScreenerView() {
           <p className="section-sub">
             나스닥 스냅샷 {data ? data.count.toLocaleString() : '…'}종목 (
             {data?.as_of || '…'} 기준)에 팀 타겟 필터를 <b>브라우저에서 직접</b>{' '}
-            적용해요 — 서버 없이 동작해요 🍬
+            적용해요 — 서버 없이 동작해요 💛
           </p>
         </div>
       </section>

@@ -1,60 +1,60 @@
-/* ─── Bubble gum pop palette (color_pallete.png) ─────────────────────
-   #ffc1cc · #feb9c6 · #ffb1be · #ffabb9 · #ffa4b3                    */
+/* ─── Kakao yellow palette (#FFDD00 중심) ────────────────────────────
+   #fff6c2 · #ffef8f · #ffe75c · #ffdd00 · #f2c900                    */
 :root {
-  --pink-1: #ffc1cc;
-  --pink-2: #feb9c6;
-  --pink-3: #ffb1be;
-  --pink-4: #ffabb9;
-  --pink-5: #ffa4b3;
+  --sun-1: #fff6c2;
+  --sun-2: #ffef8f;
+  --sun-3: #ffe75c;
+  --sun-4: #ffdd00;
+  --sun-5: #f2c900;
 
-  --cream: #fff7f9;
+  --cream: #fffcec;
   --white: #ffffff;
-  --rose: #e8748c;
-  --rose-deep: #c9536d;
-  --ink: #6b4049;
-  --ink-strong: #513037;
+  --accent: #a67c00;
+  --accent-deep: #7a5b00;
+  --ink: #4d3f14;
+  --ink-strong: #3c1e1e;
 
   --radius-lg: 28px;
   --radius-md: 20px;
-  --shadow-soft: 0 10px 30px rgba(255, 164, 179, 0.35);
-  --shadow-tiny: 0 4px 14px rgba(255, 164, 179, 0.25);
+  --shadow-soft: 0 10px 30px rgba(242, 201, 0, 0.35);
+  --shadow-tiny: 0 4px 14px rgba(242, 201, 0, 0.25);
 
   --font-head: 'Jua', sans-serif;
   --font-body: 'Gowun Dodum', sans-serif;
 
   /* 컴포넌트가 참조하는 표면/보더 토큰 (다크 모드에서 재정의됨) */
   --surface: var(--white);
-  --surface-soft: #ffeef2;
-  --border-soft: var(--pink-2);
-  --border-mid: var(--pink-3);
-  --hero-ink: #7a3d4b;
+  --surface-soft: #fff8d6;
+  --border-soft: var(--sun-2);
+  --border-mid: var(--sun-3);
+  --hero-ink: #5a4200;
   --pos: #16a34a;
   --neg: #dc2626;
 }
 
-/* ─── Dark mode (bubble gum, midnight edition 🌙) ─────────────────── */
+/* ─── Dark mode (kakao yellow, midnight edition 🌙) ───────────────── */
 [data-theme='dark'] {
-  --pink-1: #4a2b36;
-  --pink-2: #5a3441;
-  --pink-3: #6b3d4d;
-  --pink-4: #7c4658;
-  --pink-5: #8d4f63;
+  --sun-1: #3d3410;
+  --sun-2: #4d4114;
+  --sun-3: #5e4f18;
+  --sun-4: #6f5d1c;
+  --sun-5: #806b20;
 
-  --cream: #241a1e;
-  --white: #2f2228;
-  --rose: #f2a3b5;
-  --rose-deep: #ff9fb4;
-  --ink: #e8d3d9;
-  --ink-strong: #f7e7eb;
+  --cream: #1c1910;
+  --white: #262214;
+  --accent: #ffe14d;
+  --accent-deep: #ffd83d;
+  --ink: #ece2bd;
+  --ink-strong: #fff7d1;
 
   --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
   --shadow-tiny: 0 4px 14px rgba(0, 0, 0, 0.35);
 
-  --surface: #2f2228;
-  --surface-soft: #2a1e23;
-  --border-soft: #5a3441;
-  --border-mid: #6b3d4d;
-  --hero-ink: #f7dbe2;
+  --surface: #262214;
+  --surface-soft: #211d10;
+  --border-soft: #4d4114;
+  --border-mid: #5e4f18;
+  --hero-ink: #fff0a6;
   --pos: #4ade80;
   --neg: #f87171;
 }
@@ -64,14 +64,15 @@
 }
 
 [data-theme='dark'] .nav {
-  background: rgba(36, 26, 30, 0.88);
+  background: rgba(28, 25, 16, 0.88);
 }
 
 [data-theme='dark'] .hero {
-  background: linear-gradient(160deg, #3a2530 0%, #4a2b36 55%, #5a3441 100%);
+  background: linear-gradient(160deg, #2e2810 0%, #3d3410 55%, #4d4114 100%);
 }
 
 [data-theme='dark'] .hero h1 {
+  color: var(--ink-strong);
   text-shadow: 0 3px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -84,11 +85,11 @@
 }
 
 [data-theme='dark'] .priority-table td {
-  border-bottom-color: #4a2b36;
+  border-bottom-color: #3d3410;
 }
 
 [data-theme='dark'] footer {
-  background: linear-gradient(160deg, #4a2b36, #5a3441);
+  background: linear-gradient(160deg, #3d3410, #4d4114);
   color: var(--ink);
 }
 
@@ -97,7 +98,7 @@
 }
 
 [data-theme='dark'] .roadmap-col li.sub {
-  color: #c9a4ad;
+  color: #c9b98a;
 }
 
 [data-theme='dark'] .hero p {
@@ -136,7 +137,7 @@ h1, h2, h3, h4 {
 }
 
 a {
-  color: var(--rose-deep);
+  color: var(--accent-deep);
   text-decoration: none;
 }
 
@@ -151,9 +152,9 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 247, 249, 0.88);
+  background: rgba(255, 252, 236, 0.88);
   backdrop-filter: blur(10px);
-  border-bottom: 2px dashed var(--pink-2);
+  border-bottom: 2px dashed var(--sun-2);
 }
 
 .nav-inner {
@@ -169,7 +170,7 @@ a {
 .nav-logo {
   font-family: var(--font-head);
   font-size: 1.35rem;
-  color: var(--rose-deep);
+  color: var(--accent-deep);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -193,7 +194,7 @@ a {
 }
 
 .nav-links a:hover {
-  background: var(--pink-1);
+  background: var(--sun-1);
   color: var(--ink-strong);
 }
 
@@ -203,14 +204,14 @@ a {
   overflow: hidden;
   text-align: center;
   padding: 96px 20px 110px;
-  background: linear-gradient(160deg, var(--pink-1) 0%, var(--pink-3) 55%, var(--pink-5) 100%);
+  background: linear-gradient(160deg, var(--sun-1) 0%, var(--sun-3) 55%, var(--sun-5) 100%);
 }
 
 .hero-badge {
   display: inline-block;
   font-family: var(--font-head);
   background: var(--white);
-  color: var(--rose-deep);
+  color: var(--accent-deep);
   border-radius: 999px;
   padding: 8px 20px;
   box-shadow: var(--shadow-tiny);
@@ -219,8 +220,8 @@ a {
 
 .hero h1 {
   font-size: clamp(2.4rem, 6vw, 3.8rem);
-  color: #fff;
-  text-shadow: 0 3px 0 rgba(201, 83, 109, 0.35);
+  color: var(--ink-strong);
+  text-shadow: 0 3px 0 rgba(255, 255, 255, 0.55);
   margin-bottom: 18px;
 }
 
@@ -228,7 +229,7 @@ a {
   max-width: 640px;
   margin: 0 auto 34px;
   font-size: 1.08rem;
-  color: #7a3d4b;
+  color: var(--hero-ink);
 }
 
 .hero-cta {
@@ -236,7 +237,7 @@ a {
   font-family: var(--font-head);
   font-size: 1.05rem;
   background: var(--white);
-  color: var(--rose-deep);
+  color: var(--accent-deep);
   padding: 14px 34px;
   border-radius: 999px;
   box-shadow: var(--shadow-soft);
@@ -273,11 +274,11 @@ section {
 .section-sub {
   text-align: center;
   margin-bottom: 44px;
-  color: var(--rose);
+  color: var(--accent);
 }
 
 .alt-bg {
-  background: linear-gradient(180deg, var(--cream) 0%, #ffeef2 100%);
+  background: linear-gradient(180deg, var(--cream) 0%, #fff6c2 100%);
 }
 
 /* ─── Cards ───────────────────────────────────────────────────────── */
@@ -289,7 +290,7 @@ section {
 
 .card {
   background: var(--white);
-  border: 3px solid var(--pink-2);
+  border: 3px solid var(--sun-2);
   border-radius: var(--radius-lg);
   padding: 28px 24px;
   box-shadow: var(--shadow-tiny);
@@ -304,7 +305,7 @@ section {
 .card .emoji {
   font-size: 2.2rem;
   display: inline-block;
-  background: var(--pink-1);
+  background: var(--sun-1);
   border-radius: 18px;
   padding: 10px 14px;
   margin-bottom: 14px;
@@ -327,7 +328,7 @@ section {
 }
 
 .value {
-  background: var(--pink-1);
+  background: var(--sun-1);
   border-radius: var(--radius-lg);
   padding: 26px 24px;
   text-align: center;
@@ -353,7 +354,7 @@ section {
 .roadmap-col {
   background: var(--white);
   border-radius: var(--radius-lg);
-  border: 3px solid var(--pink-3);
+  border: 3px solid var(--sun-3);
   padding: 26px 24px;
   box-shadow: var(--shadow-tiny);
 }
@@ -365,7 +366,7 @@ section {
   font-size: 1.2rem;
   margin-bottom: 16px;
   padding-bottom: 12px;
-  border-bottom: 2px dashed var(--pink-2);
+  border-bottom: 2px dashed var(--sun-2);
 }
 
 .roadmap-col ul {
@@ -380,7 +381,7 @@ section {
 }
 
 .roadmap-col li::before {
-  content: '🍬';
+  content: '💛';
   position: absolute;
   left: 0;
   font-size: 0.85rem;
@@ -389,14 +390,14 @@ section {
 .roadmap-col li.sub {
   padding-left: 46px;
   font-size: 0.88rem;
-  color: #8a5a64;
+  color: #7a6a3a;
   margin-top: -4px;
 }
 
 .roadmap-col li.sub::before {
   content: '·';
   left: 30px;
-  color: var(--pink-5);
+  color: var(--sun-5);
   font-weight: bold;
 }
 
@@ -405,7 +406,7 @@ section {
   overflow-x: auto;
   background: var(--white);
   border-radius: var(--radius-lg);
-  border: 3px solid var(--pink-2);
+  border: 3px solid var(--sun-2);
   box-shadow: var(--shadow-tiny);
   padding: 10px;
 }
@@ -419,16 +420,16 @@ section {
 .priority-table th {
   font-family: var(--font-head);
   font-weight: 400;
-  color: var(--rose-deep);
+  color: var(--accent-deep);
   padding: 14px 16px;
-  border-bottom: 2px dashed var(--pink-2);
+  border-bottom: 2px dashed var(--sun-2);
   text-align: left;
   white-space: nowrap;
 }
 
 .priority-table td {
   padding: 13px 16px;
-  border-bottom: 1px solid #ffe3e9;
+  border-bottom: 1px solid #fff0a6;
   font-size: 0.95rem;
 }
 
@@ -443,13 +444,13 @@ section {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: var(--pink-2);
+  background: var(--sun-2);
   color: var(--ink-strong);
   font-family: var(--font-head);
 }
 
 .stars {
-  color: var(--rose);
+  color: var(--accent);
   letter-spacing: 2px;
   white-space: nowrap;
 }
@@ -465,7 +466,7 @@ section {
   position: relative;
   background: var(--white);
   border-radius: var(--radius-lg);
-  border: 3px solid var(--pink-4);
+  border: 3px solid var(--sun-4);
   padding: 30px 24px 24px;
   box-shadow: var(--shadow-tiny);
 }
@@ -475,8 +476,8 @@ section {
   top: -16px;
   left: 20px;
   font-family: var(--font-head);
-  background: var(--pink-5);
-  color: #fff;
+  background: var(--sun-5);
+  color: var(--ink-strong);
   border-radius: 999px;
   padding: 5px 16px;
   font-size: 0.9rem;
@@ -500,7 +501,7 @@ section {
 
 .chart-card {
   background: var(--white);
-  border: 3px solid var(--pink-2);
+  border: 3px solid var(--sun-2);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-tiny);
   overflow: hidden;
@@ -509,7 +510,7 @@ section {
 .chart-card h3 {
   padding: 16px 22px 12px;
   font-size: 1.15rem;
-  border-bottom: 2px dashed var(--pink-2);
+  border-bottom: 2px dashed var(--sun-2);
 }
 
 .chart-body {
@@ -520,22 +521,22 @@ section {
   text-align: center;
   margin-top: 22px;
   font-size: 0.88rem;
-  color: var(--rose);
+  color: var(--accent);
 }
 
 /* ─── Footer ──────────────────────────────────────────────────────── */
 footer {
-  background: linear-gradient(160deg, var(--pink-3), var(--pink-5));
+  background: linear-gradient(160deg, var(--sun-3), var(--sun-5));
   padding: 56px 20px 40px;
   text-align: center;
-  color: #7a3d4b;
+  color: var(--hero-ink);
 }
 
 footer .foot-logo {
   font-family: var(--font-head);
   font-size: 1.5rem;
-  color: #fff;
-  text-shadow: 0 2px 0 rgba(201, 83, 109, 0.35);
+  color: var(--ink-strong);
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.55);
   margin-bottom: 14px;
 }
 
@@ -551,7 +552,7 @@ footer .foot-logo {
 footer .links a {
   font-family: var(--font-head);
   background: var(--white);
-  color: var(--rose-deep);
+  color: var(--accent-deep);
   border-radius: 999px;
   padding: 9px 20px;
   margin: 0 6px;
@@ -567,7 +568,7 @@ footer .copy {
 
 /* ─── View navigation ─────────────────────────────────────────────── */
 .nav-links a.active {
-  background: var(--pink-2);
+  background: var(--sun-2);
   color: var(--ink-strong);
 }
 
@@ -598,7 +599,7 @@ footer .copy {
 
 .loading {
   text-align: center;
-  color: var(--rose);
+  color: var(--accent);
   font-family: var(--font-head);
 }
 
@@ -647,9 +648,9 @@ footer .copy {
 }
 
 .chip.on {
-  background: var(--pink-2);
+  background: var(--sun-2);
   color: var(--ink-strong);
-  border-color: var(--pink-4);
+  border-color: var(--sun-4);
 }
 
 /* ─── Detail / note cards ─────────────────────────────────────────── */
@@ -692,7 +693,7 @@ footer .copy {
 .article-meta {
   display: block;
   font-size: 0.8rem;
-  color: var(--rose);
+  color: var(--accent);
   margin-top: 2px;
 }
 
@@ -700,7 +701,7 @@ footer .copy {
   display: inline-block;
   margin-top: 12px;
   background: var(--surface-soft);
-  color: var(--rose-deep);
+  color: var(--accent-deep);
   border-radius: 10px;
   padding: 6px 10px;
   font-size: 0.78rem;
@@ -748,7 +749,7 @@ footer .copy {
 }
 
 .insight {
-  background: var(--pink-1);
+  background: var(--sun-1);
   border-radius: var(--radius-lg);
   padding: 24px 22px;
 }
@@ -785,7 +786,7 @@ footer .copy {
 }
 
 .filter-panel .chk input {
-  accent-color: var(--rose);
+  accent-color: var(--accent);
   width: 16px;
   height: 16px;
 }
@@ -795,7 +796,7 @@ footer .copy {
   flex-direction: column;
   gap: 4px;
   font-size: 0.8rem;
-  color: var(--rose);
+  color: var(--accent);
 }
 
 .filter-panel .inp input,
@@ -813,7 +814,7 @@ footer .copy {
 .result-count {
   text-align: center;
   font-family: var(--font-head);
-  color: var(--rose-deep);
+  color: var(--accent-deep);
   margin-bottom: 16px;
 }
 
@@ -840,4 +841,205 @@ footer .copy {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* ─── Hero mascot ─────────────────────────────────────────────────── */
+.hero-mascot {
+  display: block;
+  width: min(260px, 60vw);
+  height: auto;
+  margin: 0 auto 6px;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 12px 18px rgba(122, 91, 0, 0.25));
+  animation: bounce 3.2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+.hero > * {
+  position: relative;
+}
+
+/* ─── Universe funnel ─────────────────────────────────────────────── */
+.funnel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.funnel-step {
+  position: relative;
+  background: var(--surface);
+  border: 3px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 24px 22px 20px;
+  box-shadow: var(--shadow-tiny);
+  text-align: center;
+}
+
+.funnel-step.final {
+  background: var(--sun-1);
+  border-color: var(--sun-4);
+}
+
+.funnel-step .step-label {
+  font-size: 0.82rem;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.funnel-step .step-num {
+  font-family: var(--font-head);
+  font-size: 2.2rem;
+  color: var(--ink-strong);
+  line-height: 1.1;
+}
+
+.funnel-step .step-desc {
+  font-size: 0.88rem;
+  margin-top: 8px;
+}
+
+.funnel-step .step-file {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.74rem;
+  background: var(--surface-soft);
+  color: var(--accent-deep);
+  border-radius: 8px;
+  padding: 3px 8px;
+  word-break: break-all;
+}
+
+.funnel-step .arrow {
+  position: absolute;
+  right: -22px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: var(--sun-5);
+  z-index: 2;
+}
+
+/* ─── Bars (sector distribution) ──────────────────────────────────── */
+.bar-list {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.bar-list li {
+  display: grid;
+  grid-template-columns: 150px 1fr 56px;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+}
+
+.bar-list .bar {
+  height: 14px;
+  border-radius: 999px;
+  background: var(--sun-4);
+  min-width: 4px;
+}
+
+.bar-list .bar.dim {
+  background: var(--sun-2);
+}
+
+.bar-list .cnt {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-deep);
+}
+
+/* ─── Rule cards (prompt) ─────────────────────────────────────────── */
+.rule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 18px;
+}
+
+.rule {
+  background: var(--surface);
+  border: 3px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 22px 22px 18px;
+  box-shadow: var(--shadow-tiny);
+}
+
+.rule.keep {
+  background: var(--sun-1);
+  border-color: var(--sun-3);
+}
+
+.rule h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.rule p {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 0.76rem;
+  background: var(--surface-soft);
+  color: var(--accent-deep);
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.rule.keep .tag {
+  background: var(--surface);
+}
+
+.prompt-box {
+  margin-top: 28px;
+  background: var(--surface);
+  border: 3px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-tiny);
+  overflow: hidden;
+}
+
+.prompt-box summary {
+  cursor: pointer;
+  font-family: var(--font-head);
+  padding: 16px 22px;
+  color: var(--accent-deep);
+}
+
+.prompt-box pre {
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  white-space: pre-wrap;
+  padding: 0 22px 22px;
+  max-height: 520px;
+  overflow: auto;
+  line-height: 1.6;
+}
+
+.search-inp {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: var(--surface);
+  border: 2px solid var(--border-soft);
+  border-radius: 999px;
+  padding: 9px 18px;
+  width: min(360px, 100%);
 }

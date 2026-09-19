@@ -1,5 +1,7 @@
 import TradingViewChart from '../TradingViewChart.jsx'
 
+const BASE = import.meta.env.BASE_URL
+
 const products = [
   {
     emoji: '📊',
@@ -63,6 +65,7 @@ const roadmap = [
       { text: '임베딩 작업' },
       { text: 'Clustering — DBSCAN (t-SNE · UMAP)' },
       { text: 'DB 적재' },
+      { text: 'LLM Hard Exclusion 으로 1차 Universe 선별 (2,106 → 733)' },
       { text: 'Nasdaq Screener 기업별 태그 전수 정리' },
       { text: 'EDGAR 최신 공시를 프론트에서 바로 파악' },
       { text: '차트 변동 — 상승률 상위 · 거래량 기준' },
@@ -123,7 +126,14 @@ export default function IntroView({ dark, onNavigate }) {
           <span style={{ width: 120, height: 120, top: '25%', right: '7%', animationDelay: '0.6s' }} />
           <span style={{ width: 40, height: 40, top: '70%', right: '18%', animationDelay: '1.8s' }} />
         </div>
-        <div className="hero-badge">🍑 오픈 조직 · Stock-Agent-DONGSIGI</div>
+        <img
+          className="hero-mascot"
+          src={`${BASE}data/homepage_upper.webp`}
+          alt="Stock Agent 마스코트"
+          width="360"
+          height="360"
+        />
+        <div className="hero-badge">💛 오픈 조직 · Stock-Agent-DONGSIGI</div>
         <h1>Stock Agent</h1>
         <p>
           LLM 에이전트가 시장 데이터를 스스로 수집 · 해석하고, 사람이 이해할 수 있는
@@ -142,6 +152,11 @@ export default function IntroView({ dark, onNavigate }) {
             <h2 className="section-title">오늘 한 것 미리보기 🍰</h2>
             <p className="section-sub">최근 작업 결과를 각 페이지에서 확인할 수 있어요</p>
             <div className="card-grid">
+              <button className="card card-link" onClick={() => onNavigate('universe')}>
+                <span className="emoji">🧹</span>
+                <h3>Universe 1차 필터링</h3>
+                <p>Micro · Nano US 2,106종목을 LLM Hard Exclusion 으로 733개 후보 Universe 로 추렸어요.</p>
+              </button>
               <button className="card card-link" onClick={() => onNavigate('cluster')}>
                 <span className="emoji">🧬</span>
                 <h3>클러스터 결과</h3>

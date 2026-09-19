@@ -3,12 +3,14 @@ import IntroView from './views/IntroView.jsx'
 import ClusterView from './views/ClusterView.jsx'
 import ApiTestView from './views/ApiTestView.jsx'
 import ScreenerView from './views/ScreenerView.jsx'
+import UniverseView from './views/UniverseView.jsx'
 
 const VIEWS = [
   { id: 'intro', hash: '#/', label: '🏠 소개' },
   { id: 'cluster', hash: '#/cluster', label: '🧬 클러스터 결과' },
   { id: 'api', hash: '#/api-test', label: '🔌 API 테스트' },
   { id: 'screener', hash: '#/screener', label: '🎯 Screener 필터' },
+  { id: 'universe', hash: '#/universe', label: '🧹 Universe 필터링' },
 ]
 
 function viewFromHash() {
@@ -84,6 +86,7 @@ export default function App() {
       {view === 'cluster' && <ClusterView />}
       {view === 'api' && <ApiTestView />}
       {view === 'screener' && <ScreenerView />}
+      {view === 'universe' && <UniverseView />}
 
       <footer>
         <div className="foot-logo">📈 Stock Agent</div>
@@ -107,7 +110,7 @@ export default function App() {
             문의 · Issues 💌
           </a>
         </div>
-        <div className="copy">© 2026 Stock Agent — made with 🍬 bubble gum pop</div>
+        <div className="copy">© 2026 Stock Agent — made with 💛 kakao yellow</div>
       </footer>
     </>
   )
